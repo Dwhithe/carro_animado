@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    padding: 0;
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.fondo{
+    background-image: url('./FONDO1.png');
+    background-size:100% ;
+   /*  background-repeat: no-repeat;  */
+    width:1000px;
+    height:1000px;  
+    position: absolute;
+   
+    /* animation: fondo-animado 15s linear infinite; */
+}
+.fondo_mover{
+    animation: fondo-animado 15s linear infinite;
+    
+}
+.carro_mover{
+    animation: llanta-animada 2.5s linear infinite;
+    animation: llanta-animada 2.5s linear infinite;
+}
+.contenedor{
+    position: relative;
+}
+
+.oculto{
+    display: none;
+}
+.carro {
+    width: 17rem;
+    position: absolute;
+    top:500px ;
+    right:544px ;
+    z-index: 1;
+    
+
+
+}
+.rueda1 {
+    position: absolute;
+    width: 2.5rem;
+    top: 545px;
+    right: 573px;
+    z-index: 2;
+   
+    
+    
+}
+
+.rueda2{
+    position: absolute;
+    width: 2.7rem;
+    top: 539px;
+    right: 731px;
+    z-index: 2;
+   
+    
+}
+
+.luz {
+    position: absolute;
+    top: 531px;
+    left: 420px;
+    height: 1rem;
+    animation: luz-animada 2s linear infinite;
+    
+}
+.sprite{
+    width: 100px; 
+    height: 65px; 
+    background: url('./spritepuess.png') 0 0;
+    animation: play 0.8s steps(4) infinite;
+    position: relative;
+    top: 500px;
+    left: 81px;
+}
+/* .humo{
+    position: absolute;
+    top: 545px;
+    left: 490px;
+    height: 2rem;
+    animation: 3s linear infinite;
+    
+  
+} */
+@keyframes llanta-animada{
+    100%{
+        transform: rotate(1080deg);
+        
+    }
+}
+
+@keyframes luz-animada{
+    0%{
+        opacity: 100%;
+    }
+    100%{
+        opacity: 20%;
+    }
+}
+@keyframes fondo-animado{
+    100%{
+        background-position-x:-11500px;
+    }
+}
+
+@keyframes play {
+    100% { background-position: -400px; }
+}
